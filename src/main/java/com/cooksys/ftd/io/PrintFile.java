@@ -10,18 +10,19 @@ import java.io.OutputStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class CopyFile {
+public class PrintFile {
 	
-	private static Logger log = LoggerFactory.getLogger(CopyFile.class);
+	private static Logger log = LoggerFactory.getLogger(PrintFile.class);
 	
 	public static void main() throws FileNotFoundException, IOException {
-		try (InputStream in = new FileInputStream("C:\\stupid-test-resources\\input.txt");
-				OutputStream out = new FileOutputStream("C:\\stupid-test-resources\\output.txt");) {
+		try (InputStream in = new FileInputStream("C:\\stupid-test-resources\\input.txt");) {
 			int c;
+/*			String outstring = "";
 			while((c = in.read()) != -1) {
-				out.write(c);
-			}
-			log.debug("CopyFile main method called.");
+				outstring += in.readLine
+			} */
+			log.debug("PrintFile main method called.");
+			//return outstring;
 		}
 	}
 
